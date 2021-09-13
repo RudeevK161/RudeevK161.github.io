@@ -12,16 +12,83 @@
   </head>
 
  <body>
-
+<a id=“links”></a> Ссылки:
   <ul>
-     <li> <a href="http://example.com/"> абсолютную гиперссылку на главную страницу сайта example.com;</a> </li>
-	 <li> <a href="https://example.com/"> абсолютную на главную сайта example.com в протоколе https;</a> </li>
-	 <li> <a href="ftp://example.com/file.txt"> ссылку на файл на сервере FTP без авторизации;</a> </li>
-	 <li> <a href="ftp://user:password@example.com/file.txt">ссылку на файл на сервере FTP с авторизацией;</a> </li>
-	 <li> <a href="https://example.com#about"> ссылку на фрагмент страницы некоторого сайта;</a> </li>
-	 <li>  <a name="mark"> ссылку на фрагмент текущей страницы; </a> </li>
-	 <li> <p><a href="#mark"> ссылку с двумя параметрами в URL; </a> </li>
-	 
+      <li> <a href="http://example.com"> 1.Абсолютная гиперссылка на главную страницу сайта example.com</a> </li>
+	  <li> <a href="https://example.com"> 2.Абсолютная на главную сайта example.com в протоколе https</a> </li>
+	  <li> <a href="ftp://example.com/file.txt"> 3.Ссылка на файл на сервере FTP без авторизации</a> </li>
+	  <li> <a href="ftp://user:password@example.com/file.txt"> 4.Ссылка на файл на сервере FTP с авторизацией</a> </li>
+	  <li> <a href="https://example.com/page#element id=1"> 5.Ссылка на фрагмент страницы некоторого сайта</a> </li>
+	  <li> <a href="index.html#links"> 6.Ссылка на фрагмент текущей страницы</a> </li>
+	  <li> <a href="https://example.com?parameter=value&color=red"> 7.Ссылка с двумя параметрами в URL</a> </li>
+	  <li> <a href="https://example.com/help" title="help"> 8.Список ссылок основной навигации сайта с подписями title</a> </li>
+	  <li> <a> 9.Cсылка без href</a> </li>
+	  <li> <a href=""> 10.Ссылка с пустым href</a> </li>
+	  <li> <a href="http://example.com" rel="nofollow"> 11.Cсылка, по которой запрещен переход поисковикам</a> </li>
+	  <li> <!--noindex--><a href="http://example.com" rel="nofollow"> 12.Запрещенная для индексации поисковиками</a><!--/noindex--> </li>
+	  <li> <p> 13) Студенты <a href="https://www.kubsu.ru/ru/fktipm"> ФКТиПМ </a> 2021 </p>
+	  <li> <a href="https://kubsu.ru/ru/node/32654"><img src="photo__16.jpg" width="50" height="50" alt="14) Ссылка-изображение"></a> </li>
+	  <li>
+	    <p><img src="instagram.jpg" usemap="#map1" width="100" height="100" alt="15) Ссылка из прямоугольной области картинки"></p>
+          <p><map name="map1">
+	      <area shape="rect" alt="1" coords="10,10,90,90" href="https://www.instagram.com/">
+	    </map></p>
+	  </li>
+	  <li>
+	    <p><img src="real_madrid.jpg" usemap="#map2" width="100" height="100" alt="Ссылка из круглой области картинки">
+	      <p><map name="map2">
+	      <area shape="circle" alt="2" coords="50,50,30" href="https://https://www.realmadrid.com/">
+	    </map></p>
+	  </li>
+	  <li> <a href="demo.html"> 16.Относительная на страницу в текущем каталоге</a></li>
+	  <li> <a href="about/form.html"> 17.Относительная на страницу в каталоге about</a></li>
+	  <li> <a href="../demo.html"> 18.Относительная на страницу в каталоге уровнем выше текущего</a></li>
+	  <li> <a href="../../demo.html"> 19.Относительная на страницу в каталоге двумя уровнями выше</a></li>
+	  <li> <a href="/"> 20.Сокращенная на главную</a></li>
+	  <li> <a href="#list_of_links"> 21.Cокращенная ссылка на внутреннюю</a></li>
+	
+	<b>Форма</b>
+	<form action="/"
+      method="POST">
+      <label>
+        Введите имя:<br />
+        <input name="field1"
+          value="Ivan" />
+      </label><br />
+      <label>
+        Введите свой email:<br />
+        <input name="field3"
+          value="Ivan@edu.kubsu.ru"
+          type="email" />
+      </label><br />
+      <label>
+        Текстовое поле даты:<br />
+        <input name="field3"
+          value="2021-09-13"
+          type="date" />
+      </label><br />
+      Пол:<br />
+      <label><input type="radio" checked="checked" name="radio1" value="val1" />мужской</label>
+      <label><input type="radio" name="radio1" value="val2" />женский</label><br />
+	  Количество конечностей:<br />
+      <label><input type="radio" name="radio2" value="val1" />2 ноги, 2 руки</label>
+	  <label><input type="radio" name="radio2" value="val2" />0 ног, 0 рук</label>
+      <label><input type="radio" checked="checked" name="radio2" value="val3" />2 руки, 1 нога</label><br />	
+	  Сверхспособности:<br />
+        <label><select name="field4"
+          multiple="multiple">
+          <option value="val1">Бессмертие</option>
+          <option value="val2">Прохождение скозь стены</option>
+          <option value="val3" selected="selected">Левитация</option>
+        </select>
+      </label><br />
+	  <label>
+        Биография:<br />
+        <textarea name="field5">...</textarea>
+      </label><br />
+      <label><input type="checkbox" name="check-1" /> с контрактом ознакомлен (а) </label>
+      <input type="submit" value="Отправить" />
+    </form>
   </ul>
 </body>
 </html>
