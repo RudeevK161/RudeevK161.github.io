@@ -1,0 +1,15 @@
+ header img{
+             float: left;
+             margin: 10px;
+             width: 80px;
+             height: 100px;
+            }
+#logo {
+    text-align: center;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#list {
+    list-style-position: inside;
+}
