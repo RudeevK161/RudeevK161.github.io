@@ -3,6 +3,8 @@ headerblock {
     background-color: #;
     padding: 10px;
     height: 120px;
+    vertical-align:middle;
+	display:flex;
 }
 
 #content {
@@ -76,6 +78,7 @@ headerblock {
     line-height: 120%;
     max-width: 560px;
     margin: 0 auto;
+    order: 3;
 }
 
     .table td {
@@ -96,8 +99,11 @@ headerblock {
     font-family: "Tahoma", monotype;
     font-weight: bold;
     line-height: 120%;
+    order: 2;
 }
-
+.links{
+    order: 1;
+}
     .form select {
         background-color: #fff0f5;
     }
