@@ -1,0 +1,37 @@
+
+#link_1, #link_2, #link_3 {
+    background-color: #FFFF00;
+    font-family: fantasy;
+}
+
+#bf_list, #content table, #superform {
+    background-color: #EFE9D7;
+    font-family: cursive;
+}
+
+header main, header aside {
+    background-color: #4169E1;
+    font-family: fantasy;
+    vertical-align: middle;
+    height: 100%;
+}
+
+table td, th {
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+}
+
+table_odd {
+    background-color: #fff0f5;
+}
+
+table_even {
+    background-color: #37B0BD;
+}
+
+body footer {
+    background-color: #BDB76B;
+}
