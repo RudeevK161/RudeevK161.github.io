@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	console.log("DOM fully loaded and parsed");
     let radioListener = "";
 	let amount = 0;
-	let typeAll = [2000, 1200, 3000];
+	let typeAll = [1500, 1200, 3000];
 	let type = typeAll[0];
     let flag_1 = true, flag_2=true, flag_3=true;
 	let result = document.getElementById("result");
