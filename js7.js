@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".gallery").slick({
+    $(".gal").slick({
         dots: true,
         infinite: true,
         slidesToShow: 4,
