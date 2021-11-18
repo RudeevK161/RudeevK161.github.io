@@ -45,7 +45,7 @@ $(document).ready(function () {
     });
 
     const ajaxSend = (formData) => {
-        fetch("https://formcarry.com/s/EzbPKuFdyzV", {
+        fetch("https://formcarry.com/s/RbmO9k4vDkz", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
