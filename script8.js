@@ -1,14 +1,14 @@
 function formShow() {
     $(".window").show();
     window.history.pushState({ "isActive": true }, "", "#form");
-    $(".wrapper").addClass("modal-opened");
+    $(".wr").addClass("modal-opened");
     $(".background").addClass("blur");
 }
 
 function formHide() {
     $(".window").hide();
     window.history.pushState({ "isActive": false }, "", "exercise8.html");
-    $(".wrapper").removeClass("modal-opened");
+    $(".wr").removeClass("modal-opened");
     $(".background").removeClass("blur");
 }
 
@@ -74,3 +74,5 @@ $(document).ready(function () {
             ajaxSend(formData);
         });
     };
+
+});
