@@ -12,10 +12,10 @@
 
 .window{
     display: none;
-    background-color: blue;
+    background-color: green;
     text-align: center;
 	position: relative;
-    color:blue;
+    color:black;
     z-index: 1;
 }
 
@@ -44,8 +44,8 @@
 .upt{
     position: relative;
     text-align: center;
-    background-color: blue;
-    color: blue;
+    background-color: green;
+    color: black;
 }
 
 .modal-opened{
