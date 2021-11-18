@@ -7,7 +7,7 @@ function formShow() {
 
 function formHide() {
     $(".window-wrapper").hide();
-    window.history.pushState({ "isActive": false }, "", "html8.html");
+    window.history.pushState({ "isActive": false }, "", "exercise8.html");
     $(".wrapper").removeClass("modal-opened");
     $(".background").removeClass("blur");
 }
@@ -28,7 +28,7 @@ $(document).ready(function () {
         }
     });
 
-    let data = document.querySelectorAll(".information");
+    let data = document.querySelectorAll(".info");
     data.forEach(function (element) {
         element.value = localStorage.getItem(element.name);
         element.addEventListener("blur", function (event) {
@@ -54,7 +54,7 @@ $(document).ready(function () {
             body: JSON.stringify(formData)
         })
             .then(function (response) {
-                alert("Ñîîáùåíèå îòïðàâëåíî");
+                alert("Сообщение отправлено");
                 data.forEach((element) => { element.value = ""; });
                 $("#check").prop("checked", false);
                 $("#submitButton").prop("disabled", true);
@@ -66,7 +66,6 @@ $(document).ready(function () {
     const forms = $("#thatForm");
     for (let j = 0; j < forms.length; j++) {
         forms[j].addEventListener("submit", function (e) {
-
             e.preventDefault();
 
             let formData = new FormData(this);
