@@ -1,11 +1,11 @@
-function formaShow() {
+function formShow() {
     $(".window-wrapper").show();
     window.history.pushState({ "isActive": true }, "", "#form");
     $(".wrapper").addClass("modal-opened");
     $(".background").addClass("blur");
 }
 
-function formaHide() {
+function formHide() {
     $(".window-wrapper").hide();
     window.history.pushState({ "isActive": false }, "", "html8.html");
     $(".wrapper").removeClass("modal-opened");
@@ -38,13 +38,13 @@ $(document).ready(function () {
 
     window.addEventListener("popstate", function (event) {
         if (event.state.isActive) {
-            formaShow();
+            formShow();
         } else {
-            formaHide();
+            formHide();
         }
     });
 
-    const ajaxSend = (formaData) => {
+    const ajaxSend = (formData) => {
         fetch("https://formcarry.com/s/RbmO9k4vDkz", {
             method: "POST",
             headers: {
@@ -54,7 +54,7 @@ $(document).ready(function () {
             body: JSON.stringify(formData)
         })
             .then(function (response) {
-                alert("Ñîîáùåíèå îòïðàâëåíî");
+                alert("Ã‘Ã®Ã®Ã¡Ã¹Ã¥Ã­Ã¨Ã¥ Ã®Ã²Ã¯Ã°Ã Ã¢Ã«Ã¥Ã­Ã®");
                 data.forEach((element) => { element.value = ""; });
                 $("#check").prop("checked", false);
                 $("#submitButton").prop("disabled", true);
@@ -69,10 +69,10 @@ $(document).ready(function () {
 
             e.preventDefault();
 
-            let formaData = new FormaData(this);
-            formaData = Object.fromEntries(formaData);
+            let formData = new FormData(this);
+            formData = Object.fromEntries(formData);
 
-            ajaxSend(formaData);
+            ajaxSend(formData);
         });
     };
 
