@@ -1,12 +1,12 @@
 function formShow() {
-    $(".window-wrapper").show();
+    $(".window").show();
     window.history.pushState({ "isActive": true }, "", "#form");
     $(".wrapper").addClass("modal-opened");
     $(".background").addClass("blur");
 }
 
 function formHide() {
-    $(".window-wrapper").hide();
+    $(".window").hide();
     window.history.pushState({ "isActive": false }, "", "exercise8.html");
     $(".wrapper").removeClass("modal-opened");
     $(".background").removeClass("blur");
@@ -15,7 +15,7 @@ function formHide() {
 $(document).ready(function () {
 
     $(document).mouseup(function (e) {
-        if (!$(".window-wrapper").is(e.target) && $(".window-wrapper").has(e.target).length === 0) {
+        if (!$(".window").is(e.target) && $(".window").has(e.target).length === 0) {
             formHide();
         }
     });
@@ -45,7 +45,7 @@ $(document).ready(function () {
     });
 
     const ajaxSend = (formData) => {
-        fetch("https://formcarry.com/s/RbmO9k4vDkz", {
+        fetch("https://formcarry.com/s/EzbPKuFdyzV", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -64,8 +64,8 @@ $(document).ready(function () {
     };
 
     const forms = $("#thatForm");
-    for (let j = 0; j < forms.length; j++) {
-        forms[j].addEventListener("submit", function (e) {
+    for (let i = 0; i < forms.length; i++) {
+        forms[i].addEventListener("submit", function (e) {
             e.preventDefault();
 
             let formData = new FormData(this);
@@ -74,5 +74,3 @@ $(document).ready(function () {
             ajaxSend(formData);
         });
     };
-
-});
