@@ -7,6 +7,7 @@ function updatePrice() {
     checkDiv.style.display = "none";
   }
   else {
+   document.querySelector('.XAXA').innerHTML = '<span style="color: green;"></span>';
   var select = document.querySelector('select[name=prodType]');
   var price = 0;
   var prices = getPrices();
