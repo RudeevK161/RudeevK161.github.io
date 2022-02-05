@@ -24,6 +24,7 @@ function updatePrice() {
   let radios = document.getElementsByName("prodOptions");
   radios.forEach(function(radio) {
     if (radio.checked) {
+      let price = 0;
       let optionPrice = prices.prodOptions[radio.value];
       if (optionPrice !== undefined) {
         price += optionPrice;
@@ -39,6 +40,7 @@ function updatePrice() {
   let checkboxes = document.querySelectorAll("#checkboxes input");
   checkboxes.forEach(function(checkbox) {
     if (checkbox.checked) {
+      let price = 0;
       let propPrice = prices.prodProperties[checkbox.name];
       if (propPrice !== undefined) {
         price += propPrice;
