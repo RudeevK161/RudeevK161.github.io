@@ -1,57 +1,33 @@
 <!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <title>Лабораторная 6</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style6.css" />
+<html>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
-<body>
-
-    <div class="container-fluid">
-        <div class="row d-flex text-center px-2">
-            <div id="first" class="col-12 px-0 border border-dark rounded">
-                <h1>
-                    лабораторная 6
-                </h1>
-            </div>
-            <div id="second" class="col-9 mt-1 pb-1 mx-auto px-0 border border-dark rounded">
-                <form>
-                    <label>
-                        Введите количество товара:<br />
-                        <input id="amount" name="amount" type="text" />
-                    </label><br />
-                    <label>
-                        Выбирите тип товара:<br />
-                        <select name="goods">
-                            <option value="svit">свитшот</option>
-                            <option value="trousers"> брюки </option>
-                            <option value="t-shirt">рубашка </option>
-                        </select>
-                    </label><br />
-                    <div class="options" id="options">
-                        Выбирите опцию товара:<br />
-                        <label><input type="radio" name="option" value="f1">Большая</label>
-                        <label><input type="radio" name="option" value="f2">Средняя</label>
-                        <label><input type="radio" name="option" value="f3">Маленькая</label><br />
-                    </div>
-                    <div class="property" id="property">
-                        Выбирите свойство товара:<br />
-                        <label><input type="checkbox" name="property" value="pr"> бракованные </label><br />
-                    </div>
-                </form>
-            </div>
-            <div id="third" class="col-5 mt-1 pb-1 mx-auto px-0 border border-dark rounded">
-                <h3 id="result">...</h3>
-            </div>
-        </div>
+    <title>PriceCalc</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="my.js"></script>
+  </head>
+  <body>
+    <p>(Нажмите ENTER, чтобы подтвердить кол-во)</p>
+  <input type="number" placeholder="Количество товара" id="count">
+  <div class="XAXA" ></div>
+  <div id="prodPrice">Выберите тип товара</div>
+  Тип товара:
+  <form>
+    <select name="prodType">
+      <option value="1">Product 1</option>
+      <option value="2">Product 2</option>
+      <option value="3">Product 3</option>
+    </select>
+    <div id="radios">
+      <label><input type="radio" name="prodOptions" value="option1"> Опция 1</label>
+      <label><input type="radio" name="prodOptions" value="option2"> Опция 2</label>
+      <label><input type="radio" name="prodOptions" value="option3"> Опция 3</label>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="js6.js"></script>
-
-</body>
-
+    <div id="checkboxes">
+      <label><input type="checkbox" name="prop1"> Свойство 1</label>
+      <label><input type="checkbox" name="prop2"> Свойство 2</label>
+    </div>
+  </form>
+  
+  </body>
 </html>
