@@ -3,11 +3,11 @@ function updatePrice() {
   let count =  document.querySelector('#count').value.match(/^\d+$/);
   if (count <=0) {
     document.querySelector('.XAXA').innerHTML = '<span style="color: red;">кол-во товара должно быть больше нуля</span>';
-   let checkDiv = document.getElementById("checkboxes");
+    let checkDiv = document.getElementById("checkboxes");
     checkDiv.style.display = "none";
   }
   else {
-   document.querySelector('.XAXA').innerHTML = '<span style="color: green;"></span>';
+  document.querySelector('.XAXA').innerHTML = '<span style="color: green;"></span>';
   var select = document.querySelector('select[name=prodType]');
   var price = 0;
   var prices = getPrices();
@@ -102,7 +102,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
   });
 
- updatePrice();
+  updatePrice();
   count.onkeypress = function(e) {
     if (e.keyCode == 13 ||  e.key == 13) {
       updatePrice();
