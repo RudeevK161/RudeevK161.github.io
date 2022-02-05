@@ -12,7 +12,8 @@ function updatePrice() {
   var price = 0;
   var prices = getPrices();
   let priceIndex = parseInt(select.value) - 1;
-  
+  if (priceIndex >= 0) {
+    price = prices.prodTypes[priceIndex];
   }
   
   // Скрываем или показываем радиокнопки.
@@ -23,7 +24,6 @@ function updatePrice() {
   let radios = document.getElementsByName("prodOptions");
   radios.forEach(function(radio) {
     if (radio.checked) {
-       price = prices.prodTypes[priceIndex];
       let optionPrice = prices.prodOptions[radio.value];
       if (optionPrice !== undefined) {
         price += optionPrice;
@@ -39,7 +39,6 @@ function updatePrice() {
   let checkboxes = document.querySelectorAll("#checkboxes input");
   checkboxes.forEach(function(checkbox) {
     if (checkbox.checked) {
-      price = prices.prodTypes[priceIndex];
       let propPrice = prices.prodProperties[checkbox.name];
       if (propPrice !== undefined) {
         price += propPrice;
