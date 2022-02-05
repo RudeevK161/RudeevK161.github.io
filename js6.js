@@ -102,10 +102,5 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
   });
 
-  updatePrice();
-  count.onkeypress = function(e) {
-    if (e.keyCode == 13 ||  e.key == 13) {
-      updatePrice();
-    }
-  };
+
 });
