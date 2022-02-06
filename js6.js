@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
   });
 
-    // Назначаем обработчик радиокнопок.  
+    // Назначаем обработчик чекбоксов.  
   let checkboxes = document.querySelectorAll("#checkboxes input");
   checkboxes.forEach(function(checkbox) {
     checkbox.addEventListener("change", function(event) {
