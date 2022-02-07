@@ -1,6 +1,6 @@
 $("#show").click(function (e) {
     e.preventDefault();
-    $(".popup_container").fadeIn(450);
+    $(".popup_container").fadeIn(900);
     // window.history.pushState({ page: 1 }, "titel1", "index.html")
 
     window.history.pushState({ page: 2 }, "title", "new_form_url.html")
