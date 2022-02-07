@@ -9,13 +9,13 @@ $("#show").click(function (e) {
 
 function hidePopup() {
     $(".popup_container").fadeOut(450);
-    window.history.back();
+    
 }
 
 $("#hide").click(function (e) {
     e.preventDefault();
     $(".popup_container").fadeOut(450);
-    window.history.back();
+   
 });
 
 $(function () {
