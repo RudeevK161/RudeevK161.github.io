@@ -8,13 +8,13 @@ $("#show").click(function (e) {
 });
 
 function hidePopup() {
-    $(".popup_container").fadeOut(450);
+    $(".popup_container").fadeOut(900);
     
 }
 
 $("#hide").click(function (e) {
     e.preventDefault();
-    $(".popup_container").fadeOut(450);
+    $(".popup_container").fadeOut(900);
    
 });
 
